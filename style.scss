@@ -26,7 +26,7 @@ body {
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
-
+  margin: 0 auto;
 }
 h1{
   position: absolute;
@@ -34,11 +34,23 @@ h1{
   font-size: 4rem;
   text-shadow: 1px 3px 8px rgba(120,34,182,1);
   opacity: 1;
-  animation: slow_show 4s ;
+  animation: slow_show 7s ;
   transform: translateY(-8vmin);
   z-index: 10;
+  text-align: center;
   
 
+}
+@media (max-width:800px) {
+  h1{
+    top: 50%;
+  }
+  .content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
 }
 .night {
   position: fixed;
@@ -53,6 +65,7 @@ h1{
 .flowers {
   position: relative;
   transform: scale(0.9);
+  
 }
 
 .flower {
@@ -1286,14 +1299,14 @@ h1{
 @keyframes slow_show {
   0% {
     opacity: 0;
-    filter: blur(1vmin);
-
+    
     transform: translateY(4vmin);
   }
-
-  25% {
-    opacity: .4;
   
+  25% {
+    opacity: .1;
+    
+    filter: blur(1vmin);
   }
 
   50% {
